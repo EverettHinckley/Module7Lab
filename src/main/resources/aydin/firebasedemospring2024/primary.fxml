@@ -19,12 +19,12 @@
             <Label text="CSC325-SW Engineering Student: check out the console window for the output messages..." />
                 <TextField fx:id="nameTextField" promptText="name" />
                 <TextField fx:id="ageTextField" promptText="age" />
+                <TextField fx:id="phoneNumberTextField" promptText="phone number" />
                 <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="518.0" spacing="10.0">
                     <children>
                         <Button fx:id="readButton" mnemonicParsing="false" onAction="#readButtonClicked" prefHeight="30.0" prefWidth="80.0" text="Read" />
                         <Button fx:id="writeButton" mnemonicParsing="false" onAction="#writeButtonClicked" prefHeight="30.0" prefWidth="80.0" text="Write" />
-                        <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="30.0" prefWidth="80.0" text="Register" />
-                        <Button fx:id="switchSecondaryViewButton" onAction="#switchToSecondary" prefHeight="30.0" prefWidth="180.0" text="Switch to Secondary View" />
+                        <Button fx:id="switchSecondaryViewButton" onAction="#switchToSecondary" prefHeight="30.0" prefWidth="180.0" text="Change User" />
                     </children>
                 </HBox>
                 <TextArea fx:id="outputTextArea" prefHeight="218.0" prefWidth="507.0" />
