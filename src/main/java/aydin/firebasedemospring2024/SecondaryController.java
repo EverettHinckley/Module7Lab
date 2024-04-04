@@ -16,11 +16,21 @@ import com.google.firebase.auth.UserRecord;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class SecondaryController {
 
     @FXML
-    private Button registerButton;@FXML
+    private Button registerButton;
+    @FXML
+    private TextField emailTextField;
+    @FXML
+    private PasswordField passwordTextField;
+    @FXML
+    private Label welcome;
+    @FXML
     void registerButtonClicked(ActionEvent event) {
         registerUser();
     }
@@ -34,7 +44,7 @@ public class SecondaryController {
             documents=future.get().getDocuments();
             int docNum=0;
             for (ExportedUserRecord user : page.iterateAll()) {
-                if (user.getUid().equals(documents.get(docNum).getData().get("userID"))) {
+                if (user.getUid().equals(documents.get(docNum).getData().get("userID"))&&passwordTextField.getText().equals(documents.get(docNum).getData().get("password"))) {
                     System.out.println("User signed in");
                     DemoApp.setRoot("primary");
                     userFound=true;
@@ -51,15 +61,16 @@ public class SecondaryController {
 
         Map<String, Object> data = new HashMap<>();
         data.put("userID", id);
+        data.put("password", passwordTextField.getText());
 
         //asynchronously write data
         ApiFuture<WriteResult> result = docRef.set(data);
     }
     public boolean registerUser() {
         UserRecord.CreateRequest request = new UserRecord.CreateRequest()
-                .setEmail("user222@example.com")
+                .setEmail(emailTextField.getText())
                 .setEmailVerified(false)
-                .setPassword("secretPassword")
+                .setPassword(passwordTextField.getText())
                 .setPhoneNumber("+11234567890")
                 .setDisplayName("John Doe")
                 .setDisabled(false);

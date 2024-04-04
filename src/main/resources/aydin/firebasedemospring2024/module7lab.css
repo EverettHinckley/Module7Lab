@@ -1,0 +1,28 @@
+.root{
+    -fx-background-color: white;
+}
+#secondaryButton{
+    -fx-pref-height: 30;
+    -fx-pref-width: 80;
+}
+#welcome {
+    -fx-font-weight: bold;
+}
+#title{
+    -fx-font-weight: bold;
+}
+#readButton{
+    -fx-text-fill: blue;
+}
+#writeButton{
+    -fx-text-fill: blue;
+}
+#switchSecondaryViewButton{
+    -fx-text-fill: blue;
+}
+#registerButton{
+    -fx-text-fill: blue;
+}
+#secondaryButton{
+    -fx-text-fill: blue;
+}

@@ -17,10 +17,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class PrimaryController {
     @FXML
@@ -38,7 +35,8 @@ public class PrimaryController {
     @FXML
     private Button readButton;
 
-
+    @FXML
+    private Label title;
 
     @FXML
     private Button switchSecondaryViewButton;

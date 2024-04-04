@@ -6,9 +6,13 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.layout.HBox?>
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemospring2024.SecondaryController" stylesheets="@secondary.css">
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aydin.firebasedemospring2024.SecondaryController" stylesheets="@module7lab.css">
     <children>
-        <Label text="Welcome" />
+        <Label fx:id="welcome" text="Welcome" />
+        <TextField fx:id="emailTextField" promptText="email" />
+        <PasswordField fx:id="passwordTextField" promptText="password" />
         <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="518.0" spacing="10.0">
         <Button fx:id="secondaryButton" onAction="#switchToPrimary" text="Sign in"/>
         <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="30.0" prefWidth="80.0" text="Register" />
